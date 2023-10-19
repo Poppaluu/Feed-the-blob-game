@@ -59,9 +59,7 @@ function preload() {
 
 function create() {
     this.add.sprite(400, 300, 'background').setScale(4, 3);
-
     this.add.sprite(400, 410, 'blob').setScale(1, 1);
-
     this.add.sprite(16, 20, 'burger').setScale(1, 1);
     this.add.sprite(16, 45, 'muffin').setScale(1, 1);
     this.add.sprite(16, 70, 'lollypop').setScale(1, 1);
@@ -77,9 +75,7 @@ function create() {
     createPlatform(100, 230, 4);
     createPlatform(300, 380, 4);
     createPlatform(500, 380, 4);
-
     createPlatform(400, 100, 4);
-
     createPlatform(250, 150, 4);
     createPlatform(200, 300, 4);
     createPlatform(600, 300, 4);
@@ -198,8 +194,6 @@ function createPlatform(x, y, scaleX) {
 }
 
 function collectFoodItem(player, foodItem) {
-    // Remove the food item
-    console.log(foodItem.texture.key);
 
     if(foodItem.texture.key == "burger"){
         score += 15;
@@ -223,11 +217,7 @@ function collectFoodItem(player, foodItem) {
         CrackerScore.setText(':  ' + crackers);
     }
 
-
-
     foodItem.destroy();
-
-    // Increase the score
     Score.setText('Score: ' + score);
 }
 
