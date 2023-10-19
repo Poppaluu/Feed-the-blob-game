@@ -42,19 +42,19 @@ var blobster = {
 
 function preload() {
     //basics
-    this.load.image('player', 'assets/Tiles/character.png');
-    this.load.image('ground', 'assets/Tiles/ground.png');
-    this.load.image('background', 'assets/Tiles/background.png');
-    this.load.image('platform', 'assets/Tiles/platform.png');
+    this.load.image('player', 'assets/character.png');
+    this.load.image('ground', 'assets/ground.png');
+    this.load.image('background', 'assets/background.png');
+    this.load.image('platform', 'assets/platform.png');
 
     //food items
-    this.load.image('burger', 'assets/Tiles/burger.png');
-    this.load.image('muffin', 'assets/Tiles/muffin.png');
-    this.load.image('lollypop', 'assets/Tiles/lollypop.png');
-    this.load.image('cracker', 'assets/Tiles/cracker.png');
+    this.load.image('burger', 'assets/burger.png');
+    this.load.image('muffin', 'assets/muffin.png');
+    this.load.image('lollypop', 'assets/lollypop.png');
+    this.load.image('cracker', 'assets/cracker.png');
 
     //blob
-    this.load.image('blob', 'assets/Tiles/Blob.png');
+    this.load.image('blob', 'assets/Blob.png');
 }
 
 function create() {
@@ -157,7 +157,7 @@ function checkTimeBoost() {
         player.y >= blobster.y &&
         player.y <= blobster.y + blobster.height
     ) {
-        time += burgers+muffins+lollypops+crackers;
+        time += burgers*2+muffins+lollypops+crackers;
         burgers = 0;
         muffins = 0;
         lollypops = 0;
